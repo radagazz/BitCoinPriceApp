@@ -28,7 +28,7 @@
                                         <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ZmQ-Bf-gT7">
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZmQ-Bf-gT7">
                                         <rect key="frame" x="20" y="110" width="374" height="120"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoinsign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fqe-0K-rq9">
@@ -39,14 +39,17 @@
                                                     <constraint firstAttribute="width" constant="100" id="xRC-0b-J56"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUg-GG-DRb">
-                                                <rect key="frame" x="150" y="0.0" width="100.5" height="120"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="mUg-GG-DRb">
+                                                <rect key="frame" x="110" y="0.0" width="174" height="120"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UlO-cU-Coz">
-                                                <rect key="frame" x="300.5" y="0.0" width="73.5" height="120"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UlO-cU-Coz">
+                                                <rect key="frame" x="294" y="0.0" width="80" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="RjI-MP-5YH"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -56,10 +59,18 @@
                                         <constraints>
                                             <constraint firstItem="mUg-GG-DRb" firstAttribute="top" secondItem="ZmQ-Bf-gT7" secondAttribute="top" id="0Hv-QJ-i8b"/>
                                             <constraint firstAttribute="bottom" secondItem="UlO-cU-Coz" secondAttribute="bottom" id="L2W-bV-a7i"/>
+                                            <constraint firstItem="UlO-cU-Coz" firstAttribute="top" secondItem="ZmQ-Bf-gT7" secondAttribute="top" id="RkG-pG-q4P"/>
+                                            <constraint firstAttribute="trailing" secondItem="UlO-cU-Coz" secondAttribute="trailing" id="cWz-NT-vBR"/>
                                             <constraint firstItem="UlO-cU-Coz" firstAttribute="top" secondItem="ZmQ-Bf-gT7" secondAttribute="top" id="ehU-2l-2P8"/>
+                                            <constraint firstAttribute="bottom" secondItem="UlO-cU-Coz" secondAttribute="bottom" id="s2h-eM-JLk"/>
                                             <constraint firstAttribute="height" constant="120" id="twx-W0-2Tk"/>
                                             <constraint firstAttribute="bottom" secondItem="mUg-GG-DRb" secondAttribute="bottom" id="tz3-E2-aH1"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hth-3b-yaz">
                                         <rect key="frame" x="0.0" y="240" width="414" height="578"/>
@@ -90,7 +101,7 @@
                     <connections>
                         <outlet property="currencyLabel" destination="UlO-cU-Coz" id="6ZE-CP-acs"/>
                         <outlet property="currencyPicker" destination="hth-3b-yaz" id="yzz-b7-dUc"/>
-                        <outlet property="priceLabel" destination="UlO-cU-Coz" id="aC1-xB-cyL"/>
+                        <outlet property="priceLabel" destination="mUg-GG-DRb" id="3co-kn-tjr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
